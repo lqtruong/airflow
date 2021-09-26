@@ -32,7 +32,7 @@ spark_jobs_configs = {
 }
 
 with DAG(
-        dag_id='depends_multiple_tasks',
+        dag_id='1_multiple_tasks_job',
         default_args=args,
         schedule_interval='0/1 * * * *',  # schedule every 1 minute
         start_date=days_ago(2),
@@ -59,8 +59,8 @@ with DAG(
         bash_command='echo "Go vap"',
     )
 
-    push_task = SparkSubmitOperator(
-        task_id='push_task',
+    pull_data_mongo_job = SparkSubmitOperator(
+        task_id='pull_data_mongo_job',
         conn_id='a_local_spark',
         queue='localspark',
         dag=dag,
@@ -79,4 +79,4 @@ tasks = [
     print_address
 ]
 
-tasks >> push_task >> print_end_message
+tasks >> pull_data_mongo_job >> print_end_message
