@@ -10,7 +10,7 @@ from airflow.utils.dates import days_ago
 sys.path.append(os.path.dirname(__file__))
 
 app_configs = {
-    'root_path': '/Users/lequoctruong/Documents/prog/turong/airflow-spark/'
+    'root_path': os.getcwd()
 }
 
 args = {

@@ -1,3 +1,5 @@
 python 3.9.2
-airflow 2.1.4
+apache-airflow 2.1.4
 pyspark 3.1.2
+pip install apache-airflow-providers-apache-spark 2.0.1
+
