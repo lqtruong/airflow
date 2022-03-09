@@ -1,7 +1,7 @@
 # if we install airflow, pyspark, gunicorn locally
 export AIRFLOW_HOME=~/airflow
 
-# initialize the database
+# initialize the database, remove airflow.db if reset
 airflow db init
 
 airflow users create \

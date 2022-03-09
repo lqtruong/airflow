@@ -10,7 +10,7 @@ headers = {
 }
 
 thread_pool_configs = {
-    "max_workers": 200,
+    "max_workers": 10,
     "thread_name_prefix": "io_poll",
 }
 
@@ -32,7 +32,7 @@ start = time.time()
 with ThreadPoolExecutor(max_workers=thread_pool_configs['max_workers'],
                         thread_name_prefix=thread_pool_configs['thread_name_prefix']) as executor:
     pprint(vars(executor))
-    for i in range(60):
+    for i in range(600):
         executor.submit(get_randomize, url=URL)
 
 end = time.time()

@@ -10,7 +10,7 @@ if __name__ == '__main__':
     for i in range(100):
         eventValue.append({'id': i, 'r': 'a'})
         # payload[str(i)] = i
-    payload['appsflyer_id'] = '123'
+    payload['kkk_id'] = '123'
     payload['customer_user_id'] = '2fsds'
     payload['eventTime'] = datetime.now()
     payload['os'] = '1'
